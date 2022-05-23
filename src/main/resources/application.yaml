@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: hotel
+  webflux:
+    base-path: /hotel/api
+  datasource:
+    url: jdbc:mysql://localhost:3306/hotel?useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: Password123#@!
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6379
+  sql:
+    init:
+      mode: always
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    defer-datasource-initialization: true
